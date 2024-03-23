@@ -14,6 +14,7 @@ services:
       - AUTH_SITE=icc2022 # 认证站点冰激凌
       - ICC2022_UID=18128
       - ICC2022_PASSKEY=8b1c8dc008e6bbd455e9c53e3e2ff668
+      - DOWNLOAD_CATEGORY=false
     restart: unless-stopped
     hostname: moviePilot
     container_name: moviePilot
