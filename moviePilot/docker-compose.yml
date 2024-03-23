@@ -7,7 +7,8 @@ services:
     volumes:
       - ./config:/config # 冒号左边请修改为你想保存配置的路径
       - ./downloads:/downloads #设置下载路径
-      - /root/.config/rclone:/nt/.config/rclone #rclone配置文件映射
+      - /root/.config/rclone:/moviepilot/.config/rclone #rclone配置文件映射
+      - /mnt:/mnt #rclone挂载路径
     environment:
       - TZ=Asia/Shanghai # 你的时区
       - AUTH_SITE=icc2022 # 认证站点冰激凌
