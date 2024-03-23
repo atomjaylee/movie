@@ -16,7 +16,7 @@ services:
       - ICC2022_PASSKEY=8b1c8dc008e6bbd455e9c53e3e2ff668
       - RCLONE_TRANSFERS=10 # rclone传输线程数
       - MOVIEPILOT_AUTO_UPDATE=release #重启时自动更新
-      - MOVIE_RENAME_FORMAT={{title}} ({{year}}) [tmdbid={{tmdbid}}]/{{title}} ({{year}}){% if part %}-{{part}}{% endif %}{% if releaseGroup %}-{{releaseGroup}}{% endif %}{% if videoFormat %} - {{videoFormat}}{% endif %}{{fileExt}}
+      - MOVIE_RENAME_FORMAT={{title}} ({{year}}) [tmdbid={{tmdbid}}]/{{title}} ({{year}}){% if part %}-{{part}}{% endif %}{% if videoFormat %} - {{videoFormat}}{% endif %}{% if releaseGroup %}-{{releaseGroup}}{% endif %}{{fileExt}}
       # 下载设置
       - DOWNLOAD_PATH=/downloads #下载保存目录，注意：需要将moviepilot及下载器的映射路径保持一致，否则会导致下载文件无法转移 - 仅供参考
       - DOWNLOAD_MOVIE_PATH=/downloads/Movies #电影下载保存目录，必须是DOWNLOAD_PATH的下级路径，不设置则下载到 DOWNLOAD_PATH
