@@ -8,13 +8,16 @@ services:
       - ./config:/config # 冒号左边请修改为你想保存配置的路径
       - ./downloads:/downloads #设置下载路径
       - /root/.config/rclone:/moviepilot/.config/rclone #rclone配置文件映射
-      - /mnt:/mnt #rclone挂载路径
+      - /var/run/docker.sock:/var/run/docker.sock:ro # docker.sock映射 - 支持应用内重启
     environment:
       - TZ=Asia/Shanghai # 你的时区
       - AUTH_SITE=icc2022 # 认证站点冰激凌
       - ICC2022_UID=18128
       - ICC2022_PASSKEY=8b1c8dc008e6bbd455e9c53e3e2ff668
-      - DOWNLOAD_CATEGORY=false
+      - DOWNLOAD_CATEGORY=false # 关闭二级分类
+      - RCLONE_TRANSFERS=10 # rclone传输线程数
+      - MOVIEPILOT_AUTO_UPDATE=release #重启时自动更新
+      - MOVIE_RENAME_FORMAT={{title}} ({{year}}) [tmdbid]/{{title}} ({{year}}){% if part %}-{{part}}{% endif %}{% if videoFormat %} - {{videoFormat}}{% endif %}{{fileExt}}
     restart: unless-stopped
     hostname: moviePilot
     container_name: moviePilot
@@ -37,4 +40,4 @@ services:
       - 56881:56881/udp
       # 此处WEB UI 目标端口与内部端口务必保证相同，见问题1
     restart: unless-stopped
-    
+     
