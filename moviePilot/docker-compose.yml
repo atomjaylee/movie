@@ -24,7 +24,7 @@ services:
       - DOWNLOAD_ANIME_PATH=/downloads/anime #电视剧下载保存目录，必须是DOWNLOAD_PATH的下级路径，不设置则下载到 DOWNLOAD_PATH
       - DOWNLOAD_CATEGORY=false #下载二级分类开关
       - TORRENT_TAG=MOVIEPILOT #种子标签
-  # 媒体库
+      # 媒体库
       - LIBRARY_PATH=/ #媒体库目录，多个目录使用,分隔
       - LIBRARY_MOVIE_NAME=movie #电影媒体库目录名，默认电影
       - LIBRARY_TV_NAME=tv #电视剧媒体库目录名，默认电视剧
