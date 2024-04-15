@@ -11,6 +11,8 @@ services:
       - ./shared:/media:shared #optional media path of host
     devices:
       - /dev/fuse:/dev/fuse
+    ports:
+      - 39404:19798 # HTTP port
     restart: unless-stopped
     pid: "host"
     privileged: true
