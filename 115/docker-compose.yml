@@ -1,3 +1,4 @@
+version: "2.1"
 services:
   cloudnas:
     image: cloudnas/clouddrive2
@@ -15,3 +16,4 @@ services:
     pid: "host"
     privileged: true
     network_mode: "host"
+
