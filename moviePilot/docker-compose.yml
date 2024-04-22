@@ -19,16 +19,16 @@ services:
       - MOVIE_RENAME_FORMAT={{title}} ({{year}}) [tmdbid={{tmdbid}}]/{{title}} ({{year}}){% if part %}-{{part}}{% endif %}{% if videoFormat %} - {{videoFormat}}{% endif %}{% if releaseGroup %}-{{releaseGroup}}{% endif %}{{fileExt}}
       # 下载设置
       - DOWNLOAD_PATH=/downloads #下载保存目录，注意：需要将moviepilot及下载器的映射路径保持一致，否则会导致下载文件无法转移 - 仅供参考
-      - DOWNLOAD_MOVIE_PATH=/downloads/movie #电影下载保存目录，必须是DOWNLOAD_PATH的下级路径，不设置则下载到 DOWNLOAD_PATH
-      - DOWNLOAD_TV_PATH=/downloads/tv #电视剧下载保存目录，必须是DOWNLOAD_PATH的下级路径，不设置则下载到 DOWNLOAD_PATH
-      - DOWNLOAD_ANIME_PATH=/downloads/anime #电视剧下载保存目录，必须是DOWNLOAD_PATH的下级路径，不设置则下载到 DOWNLOAD_PATH
+      - DOWNLOAD_MOVIE_PATH=/downloads #电影下载保存目录，必须是DOWNLOAD_PATH的下级路径，不设置则下载到 DOWNLOAD_PATH
+      - DOWNLOAD_TV_PATH=/downloads #电视剧下载保存目录，必须是DOWNLOAD_PATH的下级路径，不设置则下载到 DOWNLOAD_PATH
+      - DOWNLOAD_ANIME_PATH=/downloads #电视剧下载保存目录，必须是DOWNLOAD_PATH的下级路径，不设置则下载到 DOWNLOAD_PATH
       - DOWNLOAD_CATEGORY=false #下载二级分类开关
       - TORRENT_TAG=MOVIEPILOT #种子标签
       # 媒体库
       - LIBRARY_PATH=/ #媒体库目录，多个目录使用,分隔
-      - LIBRARY_MOVIE_NAME=movie #电影媒体库目录名，默认电影
-      - LIBRARY_TV_NAME=tv #电视剧媒体库目录名，默认电视剧
-      - LIBRARY_ANIME_NAME=anime #动漫媒体库目录名，默认电视剧/动漫
+      - LIBRARY_MOVIE_NAME=/ #电影媒体库目录名，默认电影
+      - LIBRARY_TV_NAME=/ #电视剧媒体库目录名，默认电视剧
+      - LIBRARY_ANIME_NAME=/ #动漫媒体库目录名，默认电视剧/动漫
       - LIBRARY_CATEGORY=false # 媒体库二级分类开关
       - TRANSFER_TYPE=rclone_copy #整理转移方式，支持link/copy/move/softlink/rclone_copy/rclone_move
       # 插件库
