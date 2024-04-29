@@ -6,7 +6,7 @@ services:
       - 3000:3000 # 默认的webui控制端口
     volumes:
       - ./config:/config # 冒号左边请修改为你想保存配置的路径
-      - ./downloads:/downloads #设置下载路径
+      - /downloads:/downloads #设置下载路径
       - /root/.config/rclone:/moviepilot/.config/rclone #rclone配置文件映射
       - /var/run/docker.sock:/var/run/docker.sock:ro # docker.sock映射 - 支持应用内重启
     environment:
