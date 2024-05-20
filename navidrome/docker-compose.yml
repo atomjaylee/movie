@@ -13,5 +13,5 @@ services:
       ND_SESSIONTIMEOUT: 24h
       ND_BASEURL: ""
     volumes:
-      - "/mnt/usb8-1/Caches/navidrome:/data"
-      - "/mnt/usb8-1/music:/music:ro"
+      - "./data:/data"
+      - "/mnt/oneDrive_LG/音乐:/music:ro"
