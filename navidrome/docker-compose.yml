@@ -11,6 +11,11 @@ services:
       ND_LOGLEVEL: info
       ND_SESSIONTIMEOUT: 24h
       ND_BASEURL: ""
+      ND_SPOTIFY_ID: "c58244c453784fcf9fb396b0de0907da" 
+      ND_SPOTIFY_SECRET : "ec3c56d776254848afe77f59bb0310bf" 
+      ND_ARTISTARTPRIORITY : "artist.*, album/artist.*, external" 
+      ND_COVERARTPRIORITY : "cover.*, folder.*, front.*, embedded, external"
+
     volumes:
       - ./data:/data
       - /mnt/oneDrive_LG/音乐:/music:ro
