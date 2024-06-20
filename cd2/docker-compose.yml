@@ -7,9 +7,8 @@ services:
       - TZ=Asia/Shanghai
       - CLOUDDRIVE_HOME=/Config
     volumes:
-      - /mnt/115/CloudNAS:/CloudNAS:shared
-      - /mnt/115/Config:/Config
-      - /mnt/115/media:/media:shared #optional media path of host
+      - /mnt:/CloudNAS:shared
+      - /mnt/card/config/cd2:/Config
     devices:
       - /dev/fuse:/dev/fuse
     restart: unless-stopped
