@@ -1,0 +1,79 @@
+start_delay: 0
+debug_mode: false
+sync_enabled: false
+restart_sync_enabled: false
+sync_scheduled: false
+observer_enabled: false
+cloud_watcher_enabled: false
+backup_scheduled: false
+cloud_watcher_scheduled: false
+config_file_watcher: false
+num_threads: 8
+log_file_size: 2
+log_restart_clear: false
+backup_dir: /app/backup
+username: admin
+password: $2b$12$gyqBRpB68Ph0GYNZFSVewehvv9SZNrnESatg8hML7h0anieLpo/fG
+sync_list: []
+cloud_watcher:
+- task_name: ''
+  source_folder: ''
+  destination_folder: ''
+  cloud_watcher_exclude_folder: ''
+  cover_enabled: false
+  cloud_watcher_enabled: false
+notification_config:
+  telegram:
+    telegram_enabled: false
+    telegram_bot_token: ''
+    telegram_chat_id: ''
+    http_proxy: ''
+    notification_type:
+      observer_started: false
+      observer_enabled: false
+      cloud_watcher_enabled: false
+      sync_completed: false
+      backup_completed: false
+      cloud_path_unmount: false
+      subtitle_extractor_completed: false
+  bark:
+    bark_enabled: false
+    bark_address: ''
+    bark_api_key: ''
+    notification_type:
+      observer_started: false
+      observer_enabled: false
+      cloud_watcher_enabled: false
+      sync_completed: false
+      backup_completed: false
+      cloud_path_unmount: false
+      subtitle_extractor_completed: false
+115_crack_captcha:
+- task_name: ''
+  cookie: ''
+  crack_captcha_enabled: true
+emby_server:
+- emby_name: Emby
+  emby_host: ''
+  emby_api_key: ''
+  emby_time_delay: 0
+  emby_replacement: ''
+  emby_scan_enabled: false
+plex_server:
+- plex_name: Plex
+  plex_host: ''
+  plex_api_key: ''
+  plex_replacement: ''
+  plex_time_delay: 0
+  plex_scan_enabled: false
+as_notify:
+- as_name: Auto_Symlink
+  as_hotst: ''
+  as_api_key: ''
+  as_time_delay: 0
+  path_replacement: ''
+  as_notify_enbabled: false
+as_api_key:
+- api_key_name: Api Key
+  api_key: ''
+backup_list: {}
